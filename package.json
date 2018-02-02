@@ -1,12 +1,12 @@
 {
-  "name": "newsbuster",
+  "name": "rumor_closer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "jim_j_wu",
+  "author": "duncan_ho",
   "license": "MIT",
   "dependencies": {
     "config-json": "^1.0.0",

@@ -13,15 +13,17 @@ bot.on('message', function(event) {
             console.log(event);
             // 重複 client 輸入的內容
              if (event.message.type = 'text') {
-                        var msg = event.message.text;
-                                event.reply(msg).then(function(data) {
+                    var msg = event.message.text;
+                    event.reply(msg).then(function(data) {
                                                     // success
-                                                    console.log(msg);
-                                                            }).catch(function(error) {
+                    console.log(msg);
+                                                            
+                    }).catch(function(error) {
                                                                             // error
-                                                                            console.log('error');
-                                                                                    });
-                                    }
+                            console.log('error');
+
+                        });
+                }
 
             });
 app.post('/webhook', linebotParser);

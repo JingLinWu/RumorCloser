@@ -24,9 +24,9 @@ bot.on('message', function(event) {
                 // if the string length is less than 20 and it contain chinese, we think this is conversation 
                 if (searchChinese(msg)){
                         // if the string contains Chinese, let the length be 20
-                        var strLengthLimit = 20
+                        var strLengthLimit = 40
                 }else{
-                        var strLengthLimit = 50
+                        var strLengthLimit = 70
                 }
                 if (msg.length > strLengthLimit || msg.includes("https://") || msg.includes("http://") ) {
                         genTheGoogleSearchURL(msg,function(data) {    
@@ -62,7 +62,7 @@ function searchChinese(Str){
 
 genTheGoogleSearchURL = function(msg,callback) {
 
-        returnURL = "https://www.google.com.tw/search?q=假+" + msg.toString().substr(0, 31)
+        returnURL = "https://www.google.com.tw/search?q=" + msg.toString().substr(0, 30) +"假"
         console.log(returnURL)
         returnURL = encodeURI(returnURL)
         console.log(returnURL)
